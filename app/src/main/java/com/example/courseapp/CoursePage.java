@@ -12,13 +12,13 @@ public class CoursePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_page);
 
-        ImageView courseImageView = findViewById(R.id.img_course);
-        TextView courseTitleTextView = findViewById(R.id.tv_show);
+        ImageView courseImg = findViewById(R.id.img_course);
+        TextView courseContentTV = findViewById(R.id.tv_show);
 
         String courseContent = getIntent().getStringExtra("content");
         int courseImage = getIntent().getIntExtra("image", R.drawable.android);
 
-        courseTitleTextView.setText(courseContent);
-        courseImageView.setImageResource(courseImage);
+        courseContentTV.setText(courseContent);
+        courseImg.setImageResource(courseImage);
     }
 }

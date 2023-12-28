@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class MainCoursesPage extends AppCompatActivity {
 
-    TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +19,9 @@ public class MainCoursesPage extends AppCompatActivity {
         Button iosButton = findViewById(R.id.btn_ios);
         Button fullstackButton = findViewById(R.id.btn_fullStack);
 
-        androidButton.setOnClickListener(v -> courseActivity(getString(R.string.androidCourse) , R.drawable.android));
-        iosButton.setOnClickListener(v -> courseActivity(getString(R.string.iosCourse) , R.drawable.ios));
-        fullstackButton.setOnClickListener(v -> courseActivity(getString(R.string.fullStackCourse) , R.drawable.full_stack));
+        androidButton.setOnClickListener(v -> courseActivity(getString(R.string.androidCourse), R.drawable.android));
+        iosButton.setOnClickListener(v -> courseActivity(getString(R.string.iosCourse), R.drawable.ios));
+        fullstackButton.setOnClickListener(v -> courseActivity(getString(R.string.fullStackCourse), R.drawable.full_stack));
 
     }
 
