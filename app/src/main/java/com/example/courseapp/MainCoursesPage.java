@@ -19,16 +19,24 @@ public class MainCoursesPage extends AppCompatActivity {
         Button iosButton = findViewById(R.id.btn_ios);
         Button fullstackButton = findViewById(R.id.btn_fullStack);
 
-        androidButton.setOnClickListener(v -> courseActivity(getString(R.string.androidCourse), R.drawable.android));
-        iosButton.setOnClickListener(v -> courseActivity(getString(R.string.iosCourse), R.drawable.ios));
-        fullstackButton.setOnClickListener(v -> courseActivity(getString(R.string.fullStackCourse), R.drawable.full_stack));
+        androidButton.setOnClickListener(v -> {
+            Course android = new Course(R.drawable.android, R.string.androidCourse);
+            courseActivity(android);
+        });
+        iosButton.setOnClickListener(v -> {
+            Course android = new Course(R.drawable.ios, R.string.iosCourse);
+            courseActivity(android);
+        });
+        fullstackButton.setOnClickListener(v -> {
+            Course android = new Course(R.drawable.full_stack, R.string.fullStackCourse);
+            courseActivity(android);
+        });
 
     }
 
-    private void courseActivity(String courseContent, int courseImage) {
+    private void courseActivity(Course course) {
         Intent intent = new Intent(this, CoursePage.class);
-        intent.putExtra("content", courseContent);
-        intent.putExtra("image", courseImage);
+        intent.putExtra("course", course);
         startActivity(intent);
     }
 }
